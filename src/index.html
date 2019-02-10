@@ -15,44 +15,48 @@
     <div class="container main__container">
       <img src="./imgs/avatar.jpg" alt="Владислав Кирилёнок" class="main__img">
       <h1 class="h1 main__heading">Влад Кирилёнок</h1>
-      <p class="main__desc">Front-end developer based near Park Cheluskicev, Minsk</p>
+      <p class="text text_var-1 main__desc">Front-end developer based near Park Cheluskicev, Minsk</p>
       <button class="button main__button">Связаться</button>
     </div>
   </section>
 
   <section class="tabs">
     <div class="container tabs__container">
-      <h2 class="h2 tabs__heading">Ожидания от ШРИ</h2>
-      <div class="tab tabs__tab">
-        <div class="tab__header">
-          <span class="h3 tab__heading">Равенство</span>
-          <span class="tab__control"></span>
+      <h2 class="h2 tabs__heading">Ожидания от&nbspШРИ</h2>
+      <div class="tabs__tab tabs__tab_opened" onClick="changeTab(this)">
+        <div class="tabs__tab-header">
+          <span class="h3 tabs__tab-heading">Обучение</span>
+          <span class="tabs__tab-control"></span>
         </div>
-        <p class="tab__text">Разработка медиаплана, анализируя результаты рекламной кампании, нейтрализует эмпирический
+        <p class="text text_var-1 tabs__tab-text">Разработка медиаплана, анализируя результаты рекламной кампании,
+          нейтрализует эмпирический
           портрет потребителя.</p>
       </div>
-      <div class="tab tabs__tab">
-        <div class="tab__header">
-          <span class="h3 tab__heading">Братство</span>
-          <span class="tab__control"></span>
+      <div class="tabs__tab" onClick="changeTab(this)">
+        <div class="tabs__tab-header">
+          <span class="h3 tabs__tab-heading">Тестирование</span>
+          <span class="tabs__tab-control"></span>
         </div>
-        <p class="tab__text">Разработка медиаплана, анализируя результаты рекламной кампании, нейтрализует эмпирический
+        <p class="text text_var-1 tabs__tab-text">Разработка медиаплана, анализируя результаты рекламной кампании,
+          нейтрализует эмпирический
           портрет потребителя.</p>
       </div>
-      <div class="tab tabs__tab">
-        <div class="tab__header">
-          <span class="h3 tab__heading">Трудоустройство</span>
-          <span class="tab__control"></span>
+      <div class="tabs__tab" onClick="changeTab(this)">
+        <div class="tabs__tab-header">
+          <span class="h3 tabs__tab-heading">Систематизация</span>
+          <span class="tabs__tab-control"></span>
         </div>
-        <p class="tab__text">Разработка медиаплана, анализируя результаты рекламной кампании, нейтрализует эмпирический
+        <p class="text text_var-1 tabs__tab-text">Разработка медиаплана, анализируя результаты рекламной кампании,
+          нейтрализует эмпирический
           портрет потребителя.</p>
       </div>
-      <div class="tab tabs__tab">
-        <div class="tab__header">
-          <span class="h3 tab__heading">Свобода</span>
-          <span class="tab__control"></span>
+      <div class="tabs__tab" onClick="changeTab(this)">
+        <div class="tabs__tab-header">
+          <span class="h3 tabs__tab-heading">Укрепление</span>
+          <span class="tabs__tab-control"></span>
         </div>
-        <p class="tab__text">Разработка медиаплана, анализируя результаты рекламной кампании, нейтрализует эмпирический
+        <p class="text text_var-1 tabs__tab-text">Разработка медиаплана, анализируя результаты рекламной кампании,
+          нейтрализует эмпирический
           портрет потребителя.</p>
       </div>
     </div>
@@ -60,27 +64,58 @@
 
   <section class="portfolio">
     <div class="container portfolio__container">
-      <h2 class="h2">Мои работы</h2>
-      <p class="portfolio__slogan">Собраны избранные реально работающие проекты</p>
-      <div class="portfolio__project project">
-        <span class="h3">Карта</span>
-        <a href="" class="project__link">map.letapis.by</a>
-        <div class="project__slider slider">
-          <div class="slider__slides">
-            <img src="" alt="" class="slider__slide">
-            <img src="" alt="" class="slider__slide">
-            <img src="" alt="" class="slider__slide">
-            <img src="" alt="" class="slider__slide">
-          </div>
-          <div class="slider__dots">
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
-          </div>
+      <h2 class="h2 portfolio__heading">Мои работы</h2>
+      <p class="text text_var-1 portfolio__slogan">Собраны избранные реально работающие проекты</p>
+      <div class="portfolio__project">
+        <span class="h3 portfolio__project-name">Печи барбекю</span>
+        <a href="http://web-minsk.ru/" target="_blank" class="text text_var-1 portfolio__project-link">barbecue.ru</a>
+        <div class="portfolio__slider">
+          <img src="imgs/1.jpg" alt="" class="portfolio__slide portfolio__slide_active">
+          <img src="#" alt="" class="portfolio__slide">
+          <img src="#" alt="" class="portfolio__slide">
+          <img src="#" alt="" class="portfolio__slide">
         </div>
-        <p class="project__text">Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм
-          Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</p>
+        <div class="portfolio__dots">
+          <span class="portfolio__dot portfolio__dot_active"></span>
+          <span class="portfolio__dot"></span>
+          <span class="portfolio__dot"></span>
+          <span class="portfolio__dot"></span>
+        </div>
+        <p class="text text_var-2 portfolio__text">Сайт для интернет-магазина печей-барбекю, детских домиков, садовых очагов и аксессуаров к ним.</p>
+      </div>
+      <div class="portfolio__project">
+        <span class="h3 portfolio__project-name">Квесты</span>
+        <a href="http://questquest.net/" target="_blank" class="text text_var-1 portfolio__project-link">questquest.net</a>
+        <div class="portfolio__slider">
+          <img src="imgs/2.jpg" alt="" class="portfolio__slide portfolio__slide_active">
+          <img src="#" alt="" class="portfolio__slide">
+          <img src="#" alt="" class="portfolio__slide">
+          <img src="#" alt="" class="portfolio__slide">
+        </div>
+        <div class="portfolio__dots">
+          <span class="portfolio__dot portfolio__dot_active"></span>
+          <span class="portfolio__dot"></span>
+          <span class="portfolio__dot"></span>
+          <span class="portfolio__dot"></span>
+        </div>
+        <p class="text text_var-2 portfolio__text">Главная страница каталога квестов questquest.net</p>
+      </div>
+      <div class="portfolio__project">
+        <span class="h3 portfolio__project-name">Мотошлемы</span>
+        <a href="https://www.matrixhelmets.com/street-fx-Pro" target="_blank" class="text text_var-1 portfolio__project-link">matrixhelmets.com</a>
+        <div class="portfolio__slider">
+          <img src="imgs/3.jpg" alt="" class="portfolio__slide portfolio__slide_active">
+          <img src="#" alt="" class="portfolio__slide">
+          <img src="#" alt="" class="portfolio__slide">
+          <img src="#" alt="" class="portfolio__slide">
+        </div>
+        <div class="portfolio__dots">
+          <span class="portfolio__dot portfolio__dot_active"></span>
+          <span class="portfolio__dot"></span>
+          <span class="portfolio__dot"></span>
+          <span class="portfolio__dot"></span>
+        </div>
+        <p class="text text_var-2 portfolio__text">Посадочная страница для продажи авторских мотоциклетных шлемов.</p>
       </div>
     </div>
   </section>
@@ -89,36 +124,35 @@
     <div class="container contacts__container">
       <h2 class="h2 contacts__heading">Контактная информация</h2>
       <ul class="contacts__socials">
-        <li class="contacts__social-item">
-          <a href="" class="contacts__social-link">
-            <span class="contacts__social-icon"></span>
+        <li class="contacts__item">
+          <a href="https://vk.me/wmaileq" target="_blank" class="contacts__link contacts__link_vk">
+            <span class="contacts__icon contacts__icon_vk"></span>
           </a>
         </li>
-        <li class="contacts__social-item">
-          <a href="" class="contacts__social-link">
-            <span class="contacts__social-icon"></span>
+        <li class="contacts__item">
+          <a href="https://www.instagram.com/vlad_kirilenok/" target="_blank" class="contacts__link contacts__link_inst">
+            <span class="contacts__icon contacts__icon_inst"></span>
           </a>
         </li>
-        <li class="contacts__social-item">
-          <a href="" class="contacts__social-link">
-            <span class="contacts__social-icon"></span>
+        <li class="contacts__item">
+          <a href="http://t.me/wmaileq" target="_blank" class="contacts__link contacts__link_telegram">
+            <span class="contacts__icon contacts__icon_telegram"></span>
           </a>
         </li>
       </ul>
-      <p class="contacts__text">Я открыт для новых проектов. Вы можете прислать мне для оценки примерное техническое
+      <p class="text text_var-1 contacts__text">Я открыт для новых проектов. Вы можете прислать мне для оценки примерное техническое
         задание или просто описание проекта своими словами.</p>
-      <form action="#">
-        <input class="contacts__input" type="text" placeholder="Как вас зовут?">
-        <input class="contacts__input" type="text" placeholder="Ваш email">
-        <textarea class="contacts__textarea" placeholder="Сообщение"></textarea>
-        <div class="contacts__file">
-          <input type="file">
-        </div>
+      <form action="#" class="contacts__form">
+        <input class="contacts__control contacts__control_input" type="text" placeholder="Как вас зовут?">
+        <input class="contacts__control contacts__control_input" type="text" placeholder="Ваш email">
+        <textarea class="contacts__control contacts__control_textarea" placeholder="Сообщение"></textarea>
+        <label for="file" class="contacts__control contacts__control_file">
+          <input id="file" type="file">
+        </label>
         <button class="button contacts__button" type="submit">Отправить</button>
       </form>
     </div>
   </section>
-
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:800|PT+Mono|PT+Sans">
   <link rel="stylesheet" href="./bundle.css">

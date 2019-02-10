@@ -1,0 +1,145 @@
+@import './vars';
+.portfolio {
+  background-color: $c-main-3;
+  color: $c-main-1;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  @media (min-width: 600px) {
+    padding-top: smoothSize(52, 100, 600, 1000);
+    padding-bottom: smoothSize(52, 100, 600, 1000);
+  }
+  @media (min-width: 1000px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  &__heading {
+    margin: 0 auto 8px;
+    max-width: 520px;
+    text-align: center;
+  }
+  &__slogan {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    max-width: 520px;
+    text-align: center;
+    opacity: .7;
+    @media (min-width: 600px) {
+      margin-bottom: smoothSize(60, 80, 600, 1000);
+    }
+    @media (min-width: 1000px) {
+      margin-bottom: 80px;
+    }
+  }
+  &__project {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @media (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: 520px 1fr;
+    }
+  }
+  &__project-name {
+    text-align: center;
+    @media (min-width: 600px) {
+      margin-bottom: smoothSize(0, 8, 600, 1000);
+    }
+    @media (min-width: 1000px) {
+      margin-bottom: 8px;
+      grid-column: span 2;
+    }
+  }
+  &__project-link {
+    margin-bottom: 16px;
+    text-align: center;
+    color: $c-sub-2;
+    transition: color .25s, opacity .25s;
+    @media (min-width: 600px) {
+      margin-bottom: smoothSize(16, 20, 600, 1000);
+    }
+    @media (min-width: 1000px) {
+      grid-column: span 2;
+    }
+    &:hover {
+      color: $c-main-1;
+    }
+    &:active {
+      color: $c-sub-2;
+      opacity: .7;
+    }
+  }
+  &__slider {
+    margin-bottom: 16px;
+    width: 100%;
+    height: smoothSize(150, 280, 320, 600);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.08), 0 4px 12px 0 rgba(0,0,0,0.12);
+    @media (min-width: 600px) {
+      margin-bottom: smoothSize(16, 20, 600, 1000);
+      height: smoothSize(280, 377, 600, 1000);
+      border-radius: smoothSize(4, 8, 600, 1000);
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08), 0 7px 22px 0 rgba(0,0,0,0.12);
+    }
+    @media (min-width: 1000px) {
+      margin-bottom: 20px;
+      height: 377px;
+      border-radius: 8px;
+      grid-column: span 2;
+    }
+  }
+  &__slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    &_active {
+      display: block;
+    }
+  }
+  &__dots {
+    margin-bottom: 16px;
+    @media (min-width: 1000px) {
+      margin-top: 4px;
+      margin-bottom: auto;
+      grid-column: 2;
+      margin-left: auto;
+    }
+  }
+  &__dot {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    &:hover:before {
+      background-color: $c-main-1;
+      border-color: $c-main-1;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 25%;
+      top: 25%;
+      width: calc(50% - 2px);
+      height: calc(50% - 2px);
+      background-color: $c-sub-2;
+      border-radius: 50%;
+      border: 1px solid $c-sub-2;
+      transition: background-color .25s, border .25s;
+    }
+    &_active:before {
+      background-color: transparent;
+    }
+  }
+  &__text {
+    @media (min-width: 1000px) {
+      grid-column: 1;
+      grid-row: 4;
+    }
+  }
+}

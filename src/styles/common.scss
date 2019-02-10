@@ -5,6 +5,10 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-size: 14px;
   line-height: 20px;
@@ -12,6 +16,7 @@ html {
 
 body {
   background-color: $c-main-2;
+  color: $c-main-4;
 }
 
 .h1 {
@@ -25,6 +30,31 @@ body {
   }
 }
 
+.h2 {
+  font-family: $ff1;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.h3 {
+  font-family: $ff1;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 20px;
+  &_var-1 {
+    font-family: $ff3;
+  }
+  &_var-2 {
+    font-family: $ff2;
+  }
+}
+
 .container {
   padding-left: smoothSize(20, 40, 320, 600);
   padding-right: smoothSize(20, 40, 320, 600);
@@ -33,10 +63,11 @@ body {
     padding-right: smoothSize(40, 150, 600, 1000);
   }
   @media (min-width: 1000px) {
-    padding-left: 150px;
-    padding-right: 150px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1000px;
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
 

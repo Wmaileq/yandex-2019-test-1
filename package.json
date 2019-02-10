@@ -1,0 +1,22 @@
+{
+  "name": "yandex-1",
+  "version": "1.0.0",
+  "description": "Yandex shri minsk 2019 task 1",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp",
+    "clean": "gulp clean"
+  },
+  "author": "Vladislav Kirilenok",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}

@@ -1,0 +1,17 @@
+$ff1: 'Montserrat', sans-serif;
+$ff2: 'PT Sans', sans-serif;
+$ff3: 'PT Mono', monospace;
+$c-main-1: #FFFFFF;
+$c-main-2: #EFF1F2;
+$c-main-3: #25282A;
+$c-main-4: #000000;
+$c-sub-1: #0059D9;
+$c-sub-2: #71ABFF;
+$c-sub-2: #C5CDE7;
+$c-third-1: #395A99;
+$c-third-2: #51ADEF;
+$c-third-3: #2CA5E0;
+
+@function smoothSize($startSize, $stopSize, $startWindowWidth, $stopWindowWidth) {
+  @return calc(#{$startSize}px + #{($stopSize - $startSize)/($stopWindowWidth - $startWindowWidth)}*(100vw - #{$startWindowWidth}px))
+}

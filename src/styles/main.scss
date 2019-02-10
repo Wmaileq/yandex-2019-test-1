@@ -1,0 +1,48 @@
+@import './vars';
+.main {
+  &__container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    margin-bottom: 32px;
+    width: smoothSize(205, 250, 320, 600);
+    height: smoothSize(205, 250, 320, 600);
+    border-radius: 50%;
+    @media (min-width: 600px) {
+      margin-bottom: smoothSize(32, 36, 600, 1000);
+      width: smoothSize(250, 340, 600, 1000);
+      height: smoothSize(250, 340, 600, 1000);;
+    }
+    @media (min-width: 1000px) {
+      margin-bottom: 36px;
+      width: 340px;
+      height: 340px;
+    }
+  }
+  &__heading {
+    margin-bottom: 8px;
+    max-width: 280px;
+    text-align: center;
+    @media (min-width: 1000px) {
+      max-width: none;
+    }
+  }
+  &__desc {
+    margin-bottom: 20px;
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'PT Mono', monospace;
+    text-align: center;
+    @media (min-width: 1000px) {
+      max-width: none;
+    }
+  }
+  &__button {
+    width: 280px;
+  }
+}

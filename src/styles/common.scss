@@ -1,0 +1,64 @@
+@import './vars';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+body {
+  background-color: $c-main-2;
+}
+
+.h1 {
+  font-size: smoothSize(32, 40, 320, 600);
+  line-height: smoothSize(36, 44, 320, 600);
+  font-family: $ff1;
+  font-weight: 800;
+  @media (min-width: 600px) {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+.container {
+  padding-left: smoothSize(20, 40, 320, 600);
+  padding-right: smoothSize(20, 40, 320, 600);
+  @media (min-width: 600px) {
+    padding-left: smoothSize(40, 150, 600, 1000);
+    padding-right: smoothSize(40, 150, 600, 1000);
+  }
+  @media (min-width: 1000px) {
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  background-color: $c-sub-1;
+  font-family: $ff1;
+  font-size: 18px;
+  color: $c-main-1;
+  text-align: center;
+  border-radius: 4px;
+  border: 0;
+  transition: background-color 0.25s;
+  cursor: pointer;
+  &:hover {
+    background-color: $c-main-4;
+  }
+  &:active {
+    background-color: rgba($c-sub-1, 0.7);
+  }
+}
